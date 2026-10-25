@@ -1,0 +1,511 @@
+{
+  "origin": "V2.3-P1 fixed question baseline; progress is newly generated test data, not user history",
+  "questions": [
+    {
+      "id": "RC01",
+      "topic": "cutoff",
+      "stem": "计算公式 fc=1/(2πRC) 中，100 nF 应写成多少 F？",
+      "options": [
+        "100 F",
+        "1×10⁻⁷ F",
+        "1×10⁻⁴ F",
+        "1×10⁷ F"
+      ],
+      "correct": 1,
+      "explanation": "n 表示10⁻⁹，因此100 nF=100×10⁻⁹ F=10⁻⁷ F。",
+      "sources": [
+        "K1"
+      ]
+    },
+    {
+      "id": "RC02",
+      "topic": "cutoff",
+      "stem": "电容保持不变，电阻变成原来的2倍，截止频率怎样变化？",
+      "options": [
+        "变成2倍",
+        "不变",
+        "变成原来的1/2",
+        "变成原来的4倍"
+      ],
+      "correct": 2,
+      "explanation": "fc 与 R 成反比。R 翻倍，RC 翻倍，fc 减半。",
+      "sources": [
+        "K1"
+      ]
+    },
+    {
+      "id": "RC03",
+      "topic": "cutoff",
+      "stem": "R=1 kΩ、C=100 nF 时，理想截止频率最接近哪一项？",
+      "options": [
+        "1591.55 Hz",
+        "15.92 Hz",
+        "159.15 kHz",
+        "100 Hz"
+      ],
+      "correct": 0,
+      "explanation": "统一单位后，RC=1000×100×10⁻⁹=10⁻⁴ s，fc=1/(2π×10⁻⁴)≈1591.55 Hz。",
+      "sources": [
+        "K1"
+      ]
+    },
+    {
+      "id": "RC04",
+      "topic": "wiring",
+      "stem": "理想串联 RC 电路要形成低通，输出应取在哪里？",
+      "options": [
+        "只取电阻两端",
+        "只取输入端",
+        "电源两端",
+        "电容两端"
+      ],
+      "correct": 3,
+      "explanation": "串联 RC 在电容两端取输出形成低通，在电阻两端取输出形成高通。",
+      "sources": [
+        "K2"
+      ]
+    },
+    {
+      "id": "RC05",
+      "topic": "wiring",
+      "stem": "理想串联 RC 电路在电阻两端取输出，对应哪种滤波器？",
+      "options": [
+        "低通",
+        "高通",
+        "带通",
+        "无法判断任何性质"
+      ],
+      "correct": 1,
+      "explanation": "本题限定理想串联 RC、输入跨整个串联支路，在电阻两端取输出形成一阶高通。",
+      "sources": [
+        "K2"
+      ]
+    },
+    {
+      "id": "RC06",
+      "topic": "wiring",
+      "stem": "关于理想 RC 电路的稳态直流响应，哪项正确？",
+      "options": [
+        "高通、低通都阻断直流",
+        "高通、低通都放大直流",
+        "低通可传递直流，高通阻断稳态直流",
+        "高通传递直流，低通阻断直流"
+      ],
+      "correct": 2,
+      "explanation": "理想低通的直流增益为1；理想高通的稳态直流增益为0。",
+      "sources": [
+        "K6"
+      ]
+    },
+    {
+      "id": "RC07",
+      "topic": "gain",
+      "stem": "一阶 RC 滤波器在截止频率处，电压幅值比约为多少？",
+      "options": [
+        "0.5",
+        "1",
+        "2",
+        "0.707"
+      ],
+      "correct": 3,
+      "explanation": "截止点电压幅值比为1/√2≈0.707，约为−3.01 dB，而不是幅值减半。",
+      "sources": [
+        "K3"
+      ]
+    },
+    {
+      "id": "RC08",
+      "topic": "gain",
+      "stem": "输入2 Vpp，在理想截止频率处，输出最接近多少 Vpp？",
+      "options": [
+        "1.414 Vpp",
+        "0.5 Vpp",
+        "2.828 Vpp",
+        "2 Vpp"
+      ],
+      "correct": 0,
+      "explanation": "输入输出采用相同的幅值定义，输出≈2×0.707=1.414 Vpp。",
+      "sources": [
+        "K3"
+      ]
+    },
+    {
+      "id": "RC09",
+      "topic": "gain",
+      "stem": "一阶低通在远高于截止频率的区域，渐近滚降约为多少？",
+      "options": [
+        "每十倍频−3 dB",
+        "每十倍频−20 dB",
+        "每十倍频+20 dB",
+        "所有频率都−20 dB"
+      ],
+      "correct": 1,
+      "explanation": "一阶低通在高频端的渐近滚降为每十倍频−20 dB；不是所有频率点都固定衰减20 dB。",
+      "sources": [
+        "K7"
+      ]
+    },
+    {
+      "id": "RC10",
+      "topic": "measurement",
+      "stem": "实验报告没有实际测量数据时，应该怎样处理？",
+      "options": [
+        "直接把理论值写成实测值",
+        "让模型补齐合理数据",
+        "保留待测标记，明确区分理论与实测",
+        "删除实验条件后填写猜测值"
+      ],
+      "correct": 2,
+      "explanation": "理论结果可作为比较基准，实际数据必须通过测量记录，不能把生成或计算的数据冒充实测。",
+      "sources": [
+        "K8"
+      ]
+    },
+    {
+      "id": "RC11",
+      "topic": "measurement",
+      "stem": "下列哪项可能使实测响应偏离本程序的理想 RC 模型？",
+      "options": [
+        "元件容差与后级负载",
+        "仅修改网页标题",
+        "更改报告文件名",
+        "把文字字号调大"
+      ],
+      "correct": 0,
+      "explanation": "元件实际值改变RC乘积，后级负载也会影响响应；本程序的理论模型忽略负载和元件误差。",
+      "sources": [
+        "K4",
+        "K5"
+      ]
+    },
+    {
+      "id": "RC12",
+      "topic": "measurement",
+      "stem": "计算实验幅值比 Vout/Vin 时，哪种做法合适？",
+      "options": [
+        "输入用峰峰值、输出用有效值，直接相除",
+        "只测输出，不测输入",
+        "输入幅值随意变化但不记录",
+        "输入输出均用峰峰值，并记录对应频率"
+      ],
+      "correct": 3,
+      "explanation": "应统一幅值定义并记录对应频率，避免把峰值、峰峰值、有效值混用。",
+      "sources": [
+        "K8"
+      ]
+    },
+    {
+      "id": "DC01",
+      "topic": "ohm",
+      "stem": "5V加在1kΩ理想电阻两端，电流是多少？",
+      "options": [
+        "5A",
+        "5mA",
+        "0.5mA",
+        "500mA"
+      ],
+      "correct": 1,
+      "explanation": "1kΩ=1000Ω，I=5/1000A=0.005A=5mA。",
+      "sources": [
+        "K9"
+      ]
+    },
+    {
+      "id": "DC02",
+      "topic": "ohm",
+      "stem": "2mA流过2kΩ理想电阻，电阻两端电压是多少？",
+      "options": [
+        "1V",
+        "4000V",
+        "4V",
+        "0.004V"
+      ],
+      "correct": 2,
+      "explanation": "I=0.002A，R=2000Ω，V=IR=4V。",
+      "sources": [
+        "K9"
+      ]
+    },
+    {
+      "id": "DC03",
+      "topic": "ohm",
+      "stem": "只知道电压为3V，可以唯一确定流过理想电阻的电流吗？",
+      "options": [
+        "可以，恒为3A",
+        "不可以，还需要电阻值或其他足够约束",
+        "可以，恒为0A",
+        "可以，任取网页侧栏的电阻值"
+      ],
+      "correct": 1,
+      "explanation": "I=V/R；缺少电阻值等约束时，电流没有唯一解，不能补入其他页面的默认参数。",
+      "sources": [
+        "K9"
+      ]
+    },
+    {
+      "id": "DC04",
+      "topic": "divider",
+      "stem": "空载分压：输入12V，上臂10kΩ、下臂20kΩ，输出跨下臂。输出是多少？",
+      "options": [
+        "4V",
+        "6V",
+        "8V",
+        "12V"
+      ],
+      "correct": 2,
+      "explanation": "Vout=12×20/(10+20)=8V。",
+      "sources": [
+        "K10"
+      ]
+    },
+    {
+      "id": "DC05",
+      "topic": "divider",
+      "stem": "输入5V、上臂和下臂均10kΩ，下臂再并联10kΩ负载，输出约为多少？",
+      "options": [
+        "1.667V",
+        "2.5V",
+        "3.333V",
+        "5V"
+      ],
+      "correct": 0,
+      "explanation": "下臂与负载并联后为5kΩ，Vout=5×5/(10+5)≈1.667V。",
+      "sources": [
+        "K10",
+        "K11"
+      ]
+    },
+    {
+      "id": "DC06",
+      "topic": "divider",
+      "stem": "输入5V，上臂与下臂电阻相等且输出空载，输出跨下臂。输出是多少？",
+      "options": [
+        "2.5V",
+        "5V",
+        "10V",
+        "0V"
+      ],
+      "correct": 0,
+      "explanation": "两个相等的串联电阻平分输入电压，空载输出为输入的一半。",
+      "sources": [
+        "K10"
+      ]
+    },
+    {
+      "id": "DC07",
+      "topic": "power",
+      "stem": "5V加在100Ω理想电阻两端，理论耗散功率是多少？",
+      "options": [
+        "25W",
+        "0.05W",
+        "5W",
+        "0.25W"
+      ],
+      "correct": 3,
+      "explanation": "P=V²/R=25/100=0.25W。",
+      "sources": [
+        "K12"
+      ]
+    },
+    {
+      "id": "DC08",
+      "topic": "power",
+      "stem": "2mA流过1kΩ理想电阻，理论耗散功率是多少？",
+      "options": [
+        "4W",
+        "4mW",
+        "2mW",
+        "0.4W"
+      ],
+      "correct": 1,
+      "explanation": "2mA=0.002A，P=I²R=0.002²×1000=0.004W=4mW。",
+      "sources": [
+        "K12"
+      ]
+    },
+    {
+      "id": "DC09",
+      "topic": "power",
+      "stem": "程序算出电阻理论耗散功率0.25W，可以由此确认什么？",
+      "options": [
+        "已完成硬件温升测量",
+        "所有0.25W电阻都一定满足使用条件",
+        "在给定理想模型和参数下的理论耗散为0.25W",
+        "已完成具体器件的额定功率选型"
+      ],
+      "correct": 2,
+      "explanation": "理论计算不能替代具体器件的额定条件核对或实测温升验证。",
+      "sources": [
+        "K12"
+      ]
+    },
+    {
+      "id": "LG01",
+      "topic": "gates",
+      "stem": "A=1、B=0时，A AND B的输出是多少？",
+      "options": [
+        "0",
+        "1",
+        "取决于变量名称",
+        "无法确定"
+      ],
+      "correct": 0,
+      "explanation": "与门只有两个输入都为1时才输出1，本题输出0。",
+      "sources": [
+        "K13"
+      ]
+    },
+    {
+      "id": "LG02",
+      "topic": "gates",
+      "stem": "A=0、B=1时，A OR B的输出是多少？",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "无法确定"
+      ],
+      "correct": 1,
+      "explanation": "或门至少有一个输入为1时就输出1。",
+      "sources": [
+        "K14"
+      ]
+    },
+    {
+      "id": "LG03",
+      "topic": "gates",
+      "stem": "A=0时，NOT A的输出是多少？",
+      "options": [
+        "0",
+        "2",
+        "1",
+        "-1"
+      ],
+      "correct": 2,
+      "explanation": "理想布尔非运算将0变为1，不是对整数做任意位宽的取反。",
+      "sources": [
+        "K15"
+      ]
+    },
+    {
+      "id": "LG04",
+      "topic": "xor",
+      "stem": "A=1、B=1时，A XOR B的输出是多少？",
+      "options": [
+        "1",
+        "2",
+        "无法确定",
+        "0"
+      ],
+      "correct": 3,
+      "explanation": "两个输入相同，二输入异或输出0。",
+      "sources": [
+        "K16"
+      ]
+    },
+    {
+      "id": "LG05",
+      "topic": "xor",
+      "stem": "以下哪组输入使A XOR B输出1？",
+      "options": [
+        "A=0，B=1",
+        "A=0，B=0",
+        "A=1，B=1",
+        "以上都不成立"
+      ],
+      "correct": 0,
+      "explanation": "输入不同时异或输出1。",
+      "sources": [
+        "K16"
+      ]
+    },
+    {
+      "id": "LG06",
+      "topic": "xor",
+      "stem": "哪组输入能体现二输入OR与XOR的不同？",
+      "options": [
+        "0，0",
+        "0，1",
+        "1，1",
+        "1，0"
+      ],
+      "correct": 2,
+      "explanation": "输入1、1时OR输出1，而XOR输出0。",
+      "sources": [
+        "K14",
+        "K16"
+      ]
+    },
+    {
+      "id": "LG07",
+      "topic": "truth",
+      "stem": "三个独立二值变量的完整真值表有多少行？",
+      "options": [
+        "3",
+        "6",
+        "9",
+        "8"
+      ],
+      "correct": 3,
+      "explanation": "每个变量有两种状态，共2³=8种组合。",
+      "sources": [
+        "K13"
+      ]
+    },
+    {
+      "id": "LG08",
+      "topic": "truth",
+      "stem": "验证两个表达式等价时，哪种证据充分？",
+      "options": [
+        "任意一组输入输出相同",
+        "所有输入组合下输出都相同",
+        "两个表达式字符数量相同",
+        "使用相同的变量名称"
+      ],
+      "correct": 1,
+      "explanation": "本工具枚举全部二值输入；只验证一个例子不足以证明等价。",
+      "sources": [
+        "K13",
+        "K14",
+        "K15"
+      ]
+    },
+    {
+      "id": "LG09",
+      "topic": "truth",
+      "stem": "NOT(A AND B)与下面哪个表达式在全部二值输入下等价？",
+      "options": [
+        "A OR B",
+        "(NOT A) AND (NOT B)",
+        "(NOT A) OR (NOT B)",
+        "A XOR B"
+      ],
+      "correct": 2,
+      "explanation": "逐行枚举00、01、10、11，NOT(A AND B)与(NOT A) OR (NOT B)均输出1、1、1、0。",
+      "sources": [
+        "K13",
+        "K14",
+        "K15"
+      ]
+    }
+  ],
+  "progress": {
+    "version": 1,
+    "answers": {
+      "RC01": [
+        0,
+        1
+      ],
+      "LG01": [
+        1
+      ]
+    }
+  },
+  "summary": {
+    "answered": 2,
+    "first_correct": 0,
+    "latest_correct": 1,
+    "wrong": 1,
+    "attempts": 3
+  }
+}
